@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ Pin.create(name: 'Dumplings (Steamed or Fried) (5)',price: '$6.00', foodtype: 'appetizer')
