@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :pins
-
-  get 'pages/home'
-  root "pages#home"
+  root "pins#index"
+  # get 'pages/home'
+  # root "pages#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
