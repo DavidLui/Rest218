@@ -5,6 +5,8 @@ class PinsController < ApplicationController
   # GET /pins.json
   def index
     @pins = Pin.all
+    @appetizers = Appetizer.all
+    appetizers= Appetizer.all
   end
 
   # GET /pins/1
