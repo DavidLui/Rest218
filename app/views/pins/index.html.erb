@@ -33,64 +33,73 @@
 <%= link_to 'New Pin', new_pin_path %>
 </div></div>
     <div class="container" style="margin-top: -0px;">
-      <div class="page-header">
+    <div class="page-header">
+
     <div class="jumbotron">
         <h1>MENU</h1>
     </jumbotron>
-      </div>
-    <div class="jumbotron" style="margin-top: -20px;">  
-    <span class="mw-headline" id="Personal_life"><p style="margin-top: -30px;"><h1>Appetizers</h1></p><hr></span>
-  
-    <div class="container-fluid">
-    <div class="row">
-      <% @pins.reject{ |pin| !(pin.foodtype == "appetizer") }.each do |pin| %>
-      
-
-        
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            
-              <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;height:40vh;">
-              <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail">
-              <p style="font-size:125%;"><center><%= pin.name %></center></p>
-              <p style="font-size:125%;color:#5CE62E;"><%= pin.price %></p>
+    </div>
+      <div class="jumbotron" style="margin-top: -20px;">  
+      <span class="mw-headline" id="Personal_life"><p style="margin-top: -30px;"><h1>Appetizers</h1></p><hr></span>
+    
+      <div class="container-fluid">
+        <div class="row">
+          <% @pins.reject{ |pin| !(pin.foodtype == "appetizer") }.each do |pin| %>  
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;height:40vh;">
+                  <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail">
+                  <p style="font-size:125%;"><center><%= pin.name %></center></p>
+                  <p style="font-size:125%;color:#5CE62E;"><%= pin.price %></p>
+                  </div>
               </div>
-          </div>
-        
-
-      <% end %>
-     </div>
-     </div>
-
-
+          <% end %>
+         </div>
+       </div>
       </div>
      
-      </div>
+
+    <div class="jumbotron" style="margin-top: -20px;">  
+      <span class="mw-headline" id="Personal_life"><p style="margin-top: -30px;"><h1>Soups</h1></p><hr></span>
+    
+      <div class="container-fluid">
+      <div class="row">
+        <% @pins.reject{ |pin| !(pin.foodtype == "soup") }.each do |pin| %>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              
+                <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;height:40vh;">
+                <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail">
+                <p style="font-size:125%;"><center><%= pin.name %></center></p>
+                <p style="font-size:125%;color:#5CE62E;"><%= pin.price %></p>
+                </div>
+            </div>
           
-      <br>
+
+        <% end %>
+       </div>
+       </div>
+    </div>
+
+  
+      <div class="jumbotron" style="margin-top: -20px;">  
+      <span class="mw-headline" id="Personal_life"><p style="margin-top: -30px;"><h1>Congee In Casserole</h1></p><hr></span>
+    
+      <div class="container-fluid">
+        <div class="row">
+          <% @pins.reject{ |pin| !(pin.foodtype == "casserole") }.each do |pin| %>  
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;height:40vh;">
+                  <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail">
+                  <p style="font-size:125%;"><center><%= pin.name %></center></p>
+                  <p style="font-size:125%;color:#5CE62E;"><%= pin.price %></p>
+                  </div>
+              </div>
+          <% end %>
+         </div>
+       </div>
+      </div>
+
+
 
   </div>
-   <div class="jumbotron" style="margin-top: -20px;">  
-    <p style="margin-top: -30px;"><h1>Soups</h1></p><hr>
-    <span class="mw-headline" id="Personal_life"><p style="margin-top: -30px;"><h1>Soup</h1></p><hr></span>
-  
-    <div class="container-fluid">
-    <div class="row">
-      <% @pins.reject{ |pin| !(pin.foodtype == "soup") }.each do |pin| %>
 
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            
-              <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;height:40vh;">
-              <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail">
-              <p style="font-size:125%;"><center><%= pin.name %></center></p>
-              <p style="font-size:125%;color:#5CE62E;"><%= pin.price %></p>
-              </div>
-          </div>
-        
-
-      <% end %>
-     </div>
-     </div>
-
-  </div><!-- /.container -->
-
-  
