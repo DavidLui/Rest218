@@ -1,35 +1,36 @@
 
 <div class="bs-docs-header" id="content" tabindex="-1">
-      <div class="container" style="background:green;">
-<h1>Listing pins</h1>
-<center>
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container" style="background:green;">
+  <h1>Listing pins</h1>
 
-  <tbody>
-    <% @pins.each do |pin| %>
+  <center>
+  <table>
+    <thead>
       <tr>
-        <td><%= pin.name %></td>
-        <td><%= pin.foodtype %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Description</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-</center>
-<br>
+    </thead>
 
-<%= link_to 'New Pin', new_pin_path %>
-</div></div>
+    <tbody>
+      <% @pins.each do |pin| %>
+        <tr>
+          <td><%= pin.name %></td>
+          <td><%= pin.foodtype %></td>
+          <td><%= link_to 'Show', pin %></td>
+          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </center>
+  <br>
 
-    <div class="container" style="margin-top: -0px;">
+  <%= link_to 'New Pin', new_pin_path %>
+  </div></div>
+
+    <div class="container-fluid" style="margin-top: -0px;">
       <div class="page-header">
       <div class="jumbotron">
           <h1>MENU</h1>
@@ -37,45 +38,37 @@
       </div>
 
 
-    <div class="jumbotron" style="margin-top: -20px;">  
-    <span class="mw-headline" id="Personal_life"><p style="margin-top: -30px;"><h1>Appetizers</h1></p><hr></span>
-  
-    <div class="container-fluid">
-    <div class="row">
-<% @pins.each do |pin| %>
-  <% pin.foodtype.singularize.titleize.constantize.all.each do |type| %>
-    <%= type.name %>
-  <% end %>
-<% end %>
-     
 
-      <% @pins.reject{ |pin| !(pin.foodtype == "appetizer") }.each do |pin| %>
       
+      <% @pins.each do |pin| %>
+                <div>
+                <div class="jumbotron" style="margin-top: -20px;">  
+                <span class="mw-headline" id="Personal_life"><p style="margin-top: -30px;"><h1><%= pin.foodtype %></h1></p><hr></span>
+                </jumbotron>
+  
+                <div class="row">
+                  <% pin.foodtype.singularize.titleize.constantize.all.each do |type| %>
 
-        
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            
-              <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;height:40vh;">
-              <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail">
-              <p style="font-size:125%;"><center><%= pin.name %></center></p>
-              <p style="font-size:125%;color:#5CE62E;"><%= pin.price %></p>
-              </div>
-          </div>
-        
-
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                      <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;height:37vh;">
+                      <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail"><hr>
+                      <p><font size="4"><%= type.name %></font></p>
+                      <p style="font-size:150%;color:#5CE62E;"><%= type.price %></p>
+                      </div>
+                    </div>
+                 
+                  <% end %>
+                </div>
+               
+               </div>
       <% end %>
-     </div>
-     </div>
-
+  
 
       </div>
-     
-      </div>
-          
-      <br>
 
-  </div>
 
-  </div><!-- /.container -->
+</div>
+
+</div><!-- /.container -->
 
   

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :soups
+
   resources :appetizers
   resources :pins
   root "pins#index"

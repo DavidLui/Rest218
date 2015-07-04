@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629022614) do
+ActiveRecord::Schema.define(version: 20150702031454) do
 
   create_table "appetizers", force: true do |t|
     t.string   "name"
@@ -30,5 +30,14 @@ ActiveRecord::Schema.define(version: 20150629022614) do
     t.string   "price"
     t.string   "foodtype"
   end
+
+  create_table "soups", force: true do |t|
+    t.string   "name"
+    t.string   "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "soups", ["name"], name: "index_soups_on_name"
 
 end
