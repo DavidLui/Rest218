@@ -1,0 +1,29 @@
+<%= form_for(@chefrecommend) do |f| %>
+  <% if @chefrecommend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chefrecommend.errors.count, "error") %> prohibited this chefrecommend from being saved:</h2>
+
+      <ul>
+      <% @chefrecommend.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :img %><br>
+    <%= f.text_field :img %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

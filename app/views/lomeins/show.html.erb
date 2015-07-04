@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lomein.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @lomein.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @lomein.img %>
+</p>
+
+<%= link_to 'Edit', edit_lomein_path(@lomein) %> |
+<%= link_to 'Back', lomeins_path %>

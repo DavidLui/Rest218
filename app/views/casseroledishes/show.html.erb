@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @casseroledish.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @casseroledish.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @casseroledish.img %>
+</p>
+
+<%= link_to 'Edit', edit_casseroledish_path(@casseroledish) %> |
+<%= link_to 'Back', casseroledishes_path %>

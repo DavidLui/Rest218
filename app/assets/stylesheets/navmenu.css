@@ -35,15 +35,15 @@ body {
 .red .active a:hover {
 	font-size: 25px;
 	font-weight: bold;
-    background:rgba(0,0,0,0.2) !important;
+  background:rgba(0,0,0,0.0) !important;
 }
 .red {
 	font-size: 18px;
 }
-.red li:hover a{
+.red .active:hover a{
 	/* font-size: 18px; */
 	font-style: italic;
-    background-color: red !important;
+  background-color: red !important;
 }
 @media (min-width: 1px) {
   .navbar-toggle {

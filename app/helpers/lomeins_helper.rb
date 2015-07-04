@@ -1,0 +1,2 @@
+module LomeinsHelper
+end

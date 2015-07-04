@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sizzlingplate.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sizzlingplate.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @sizzlingplate.img %>
+</p>
+
+<%= link_to 'Edit', edit_sizzlingplate_path(@sizzlingplate) %> |
+<%= link_to 'Back', sizzlingplates_path %>

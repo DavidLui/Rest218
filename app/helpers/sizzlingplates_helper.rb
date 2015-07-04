@@ -1,0 +1,2 @@
+module SizzlingplatesHelper
+end

@@ -1,0 +1,29 @@
+<h1>Listing seafoods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seafoods.each do |seafood| %>
+      <tr>
+        <td><%= seafood.name %></td>
+        <td><%= seafood.price %></td>
+        <td><%= seafood.img %></td>
+        <td><%= link_to 'Show', seafood %></td>
+        <td><%= link_to 'Edit', edit_seafood_path(seafood) %></td>
+        <td><%= link_to 'Destroy', seafood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seafood', new_seafood_path %>

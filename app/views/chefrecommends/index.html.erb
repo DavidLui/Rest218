@@ -1,0 +1,29 @@
+<h1>Listing chefrecommends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chefrecommends.each do |chefrecommend| %>
+      <tr>
+        <td><%= chefrecommend.name %></td>
+        <td><%= chefrecommend.price %></td>
+        <td><%= chefrecommend.img %></td>
+        <td><%= link_to 'Show', chefrecommend %></td>
+        <td><%= link_to 'Edit', edit_chefrecommend_path(chefrecommend) %></td>
+        <td><%= link_to 'Destroy', chefrecommend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chefrecommend', new_chefrecommend_path %>

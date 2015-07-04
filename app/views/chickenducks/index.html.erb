@@ -1,0 +1,29 @@
+<h1>Listing chickenducks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chickenducks.each do |chickenduck| %>
+      <tr>
+        <td><%= chickenduck.name %></td>
+        <td><%= chickenduck.price %></td>
+        <td><%= chickenduck.img %></td>
+        <td><%= link_to 'Show', chickenduck %></td>
+        <td><%= link_to 'Edit', edit_chickenduck_path(chickenduck) %></td>
+        <td><%= link_to 'Destroy', chickenduck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chickenduck', new_chickenduck_path %>

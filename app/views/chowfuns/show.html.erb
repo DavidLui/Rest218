@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chowfun.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @chowfun.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @chowfun.img %>
+</p>
+
+<%= link_to 'Edit', edit_chowfun_path(@chowfun) %> |
+<%= link_to 'Back', chowfuns_path %>

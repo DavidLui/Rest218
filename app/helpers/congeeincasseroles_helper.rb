@@ -1,0 +1,2 @@
+module CongeeincasserolesHelper
+end

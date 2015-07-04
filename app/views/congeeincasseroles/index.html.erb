@@ -1,0 +1,29 @@
+<h1>Listing congeeincasseroles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @congeeincasseroles.each do |congeeincasserole| %>
+      <tr>
+        <td><%= congeeincasserole.name %></td>
+        <td><%= congeeincasserole.price %></td>
+        <td><%= congeeincasserole.img %></td>
+        <td><%= link_to 'Show', congeeincasserole %></td>
+        <td><%= link_to 'Edit', edit_congeeincasserole_path(congeeincasserole) %></td>
+        <td><%= link_to 'Destroy', congeeincasserole, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Congeeincasserole', new_congeeincasserole_path %>

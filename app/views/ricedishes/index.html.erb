@@ -1,0 +1,29 @@
+<h1>Listing ricedishes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ricedishes.each do |ricedish| %>
+      <tr>
+        <td><%= ricedish.name %></td>
+        <td><%= ricedish.price %></td>
+        <td><%= ricedish.img %></td>
+        <td><%= link_to 'Show', ricedish %></td>
+        <td><%= link_to 'Edit', edit_ricedish_path(ricedish) %></td>
+        <td><%= link_to 'Destroy', ricedish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ricedish', new_ricedish_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @porkbeef.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @porkbeef.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @porkbeef.img %>
+</p>
+
+<%= link_to 'Edit', edit_porkbeef_path(@porkbeef) %> |
+<%= link_to 'Back', porkbeefs_path %>

@@ -1,0 +1,29 @@
+<h1>Listing lunchspecials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lunchspecials.each do |lunchspecial| %>
+      <tr>
+        <td><%= lunchspecial.name %></td>
+        <td><%= lunchspecial.price %></td>
+        <td><%= lunchspecial.img %></td>
+        <td><%= link_to 'Show', lunchspecial %></td>
+        <td><%= link_to 'Edit', edit_lunchspecial_path(lunchspecial) %></td>
+        <td><%= link_to 'Destroy', lunchspecial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lunchspecial', new_lunchspecial_path %>

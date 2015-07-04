@@ -1,0 +1,29 @@
+<h1>Listing porkbeefs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @porkbeefs.each do |porkbeef| %>
+      <tr>
+        <td><%= porkbeef.name %></td>
+        <td><%= porkbeef.price %></td>
+        <td><%= porkbeef.img %></td>
+        <td><%= link_to 'Show', porkbeef %></td>
+        <td><%= link_to 'Edit', edit_porkbeef_path(porkbeef) %></td>
+        <td><%= link_to 'Destroy', porkbeef, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Porkbeef', new_porkbeef_path %>

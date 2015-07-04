@@ -43,7 +43,8 @@
       <% @pins.each do |pin| %>
               
                 <div class="jumbotron" style="margin-top: -20px;">  
-                <span class="mw-headline" id=<% pin.foodtype %>><p style="margin-top: -30px;"><h1><%= pin.foodtype %></h1></p><hr></span>
+                <!-- <span class="mw-headline" id=<% pin.foodtype %>><p style="margin-top: -30px;"><h1><%= pin.foodtype %></h1></p><hr></span> -->
+                  <h1><%= content_tag :span, pin.name, class: 'mw-headline', id: pin.foodtype %></h1><hr>
                 </jumbotron>
                 
                 <div class="row">

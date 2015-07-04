@@ -1,0 +1,2 @@
+module RiceincasserolesHelper
+end

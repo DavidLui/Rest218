@@ -1,0 +1,29 @@
+<h1>Listing shells</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shells.each do |shell| %>
+      <tr>
+        <td><%= shell.name %></td>
+        <td><%= shell.price %></td>
+        <td><%= shell.img %></td>
+        <td><%= link_to 'Show', shell %></td>
+        <td><%= link_to 'Edit', edit_shell_path(shell) %></td>
+        <td><%= link_to 'Destroy', shell, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shell', new_shell_path %>

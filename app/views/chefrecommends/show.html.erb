@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chefrecommend.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @chefrecommend.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @chefrecommend.img %>
+</p>
+
+<%= link_to 'Edit', edit_chefrecommend_path(@chefrecommend) %> |
+<%= link_to 'Back', chefrecommends_path %>

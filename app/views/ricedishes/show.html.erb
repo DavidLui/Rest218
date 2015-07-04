@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ricedish.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @ricedish.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @ricedish.img %>
+</p>
+
+<%= link_to 'Edit', edit_ricedish_path(@ricedish) %> |
+<%= link_to 'Back', ricedishes_path %>

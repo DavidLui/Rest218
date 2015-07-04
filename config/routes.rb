@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  resources :lunchspecials
+
+  resources :ricedishes
+
+  resources :chefrecommends
+
+  resources :sizzlingplates
+
+  resources :casseroledishes
+
+  resources :riceincasseroles
+
+  resources :vegetables
+
+  resources :shells
+
+  resources :seafoods
+
+  resources :chickenducks
+
+  resources :porkbeefs
+
+  resources :chowfuns
+
+  resources :lomeins
+
+  resources :congeeincasseroles
+
   resources :soups
 
   resources :appetizers

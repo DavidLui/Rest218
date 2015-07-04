@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @seafood.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @seafood.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @seafood.img %>
+</p>
+
+<%= link_to 'Edit', edit_seafood_path(@seafood) %> |
+<%= link_to 'Back', seafoods_path %>

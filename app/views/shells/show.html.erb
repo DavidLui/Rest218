@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shell.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @shell.price %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @shell.img %>
+</p>
+
+<%= link_to 'Edit', edit_shell_path(@shell) %> |
+<%= link_to 'Back', shells_path %>

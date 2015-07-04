@@ -1,0 +1,29 @@
+<h1>Listing chowfuns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chowfuns.each do |chowfun| %>
+      <tr>
+        <td><%= chowfun.name %></td>
+        <td><%= chowfun.price %></td>
+        <td><%= chowfun.img %></td>
+        <td><%= link_to 'Show', chowfun %></td>
+        <td><%= link_to 'Edit', edit_chowfun_path(chowfun) %></td>
+        <td><%= link_to 'Destroy', chowfun, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chowfun', new_chowfun_path %>
