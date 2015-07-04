@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628081022) do
+ActiveRecord::Schema.define(version: 20150629022614) do
+
+  create_table "appetizers", force: true do |t|
+    t.string   "name"
+    t.string   "price"
+    t.string   "img"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "appetizers", ["name"], name: "index_appetizers_on_name"
 
   create_table "pins", force: true do |t|
     t.string   "name"
