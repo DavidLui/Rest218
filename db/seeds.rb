@@ -105,7 +105,7 @@
  Porkbeef.create(name: 'Beef with Oyster Sauce',price: '12.25')
 
  Chickenduck.create(name: 'Orange Flavor Chicken',price: '13.25')
- Chickenduck.create(name: 'General Tso's Chicken,price: '13.25')
+ Chickenduck.create(name: 'General Tso\'s Chicken',price: '13.25')
  Chickenduck.create(name: 'Sesame Chicken',price: '13.25')
  Chickenduck.create(name: 'Steamed Chicken with Chinese Mushroom',price: '12.25')
  Chickenduck.create(name: 'Diced Chicken with Cashew Nuts',price: '11.75')
