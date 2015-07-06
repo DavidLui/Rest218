@@ -35,12 +35,15 @@
  # Appetizer.create(name: 'Vegetable Spring Rolls(3)',price: '$5.00')
  app = Appetizer.find_or_initialize_by(name: 'Vegetable Spring Rolls(3)')
  app.price = '5.00'
+ app.save!
  # Appetizer.create(name: 'Dumplings (Steamed or Fried)(5)',price: '$6.00')
  app2 = Appetizer.find_or_initialize_by(name: 'Dumplings (Steamed or Fried)(5)')
- app.price = '5.00'
+ app2.price = '5.00'
+ app2.save!
  # Soup.create(name: 'Subgum with Melon Soup',price: '$8.45')
  soup = Soup.find_or_initialize_by(name: 'Subgum with Melon Soup')
  soup.price = '8.45'
+ soup.save!
  # Soup.create(name: 'Minced Chicken Corn Soup',price: '7.95')
  # Soup.create(name: 'Hot and Sour Soup',price: '7.95')
  # Soup.create(name: 'West Lake Minced Beef Soup',price: '8.95')
