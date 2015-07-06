@@ -1,5 +1,43 @@
 
-<div class="bs-docs-header" id="content" tabindex="-1">
+
+<div class="container-fluid" style="background:#E6E6E6;">
+    <div class="container-fluid" style="margin-top: -0px;">
+      <div class="page-header">
+      <div class="jumbotron">
+          <h1>MENU</h1>
+      </jumbotron>
+      </div>
+
+      <% @pins.each do |pin| %>
+              
+                <div class="jumbotron" style="margin-top: -20px;">  
+                <!-- <span class="mw-headline" id=<% pin.foodtype %>><p style="margin-top: -30px;"><h1><%= pin.foodtype %></h1></p><hr></span> -->
+                  <h1><%= content_tag :span, pin.name, class: 'mw-headline', id: pin.foodtype %></h1><hr>
+                </jumbotron>
+                
+                <div class="row">
+                  <% pin.foodtype.singularize.titleize.constantize.all.each do |type| %>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                      <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;">
+                        <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail"><hr>
+                        
+                        <p><font size="4"><%= type.name %></font></p>
+                        <p style="font-size:150%;color:#5CE62E;"><%= type.price %></p>
+                          
+                      </div>
+                    </div>
+                 
+                  <% end %>
+                </div>
+               
+               </div>
+      <% end %>
+
+
+</div><!-- /.container -->
+
+  </div>
 <div class="container" style="background:green;">
   <h1>Listing pins</h1>
 
@@ -28,48 +66,4 @@
   <br>
 
   <%= link_to 'New Pin', new_pin_path %>
-  </div></div>
-
-    <div class="container-fluid" style="margin-top: -0px;">
-      <div class="page-header">
-      <div class="jumbotron">
-          <h1>MENU</h1>
-      </jumbotron>
-      </div>
-
-
-
-      
-      <% @pins.each do |pin| %>
-              
-                <div class="jumbotron" style="margin-top: -20px;">  
-                <!-- <span class="mw-headline" id=<% pin.foodtype %>><p style="margin-top: -30px;"><h1><%= pin.foodtype %></h1></p><hr></span> -->
-                  <h1><%= content_tag :span, pin.name, class: 'mw-headline', id: pin.foodtype %></h1><hr>
-                </jumbotron>
-                
-                <div class="row">
-                  <% pin.foodtype.singularize.titleize.constantize.all.each do |type| %>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                      <div class="thumbnail" style="background-color: rgba(0,0,0,.0);border-width: 4px; border-style:solid;border-color: #E0E0D1;">
-                        <img src="http://theculinarycook.com/wp-content/uploads/2012/04/types-of-soup.jpg" alt="Generic placeholder thumbnail"><hr>
-                        
-                        <p><font size="4"><%= type.name %></font></p>
-                        <p style="font-size:150%;color:#5CE62E;"><%= type.price %></p>
-                          
-                      </div>
-                    </div>
-                 
-                  <% end %>
-                </div>
-               
-               </div>
-      <% end %>
-  
-
-
-</div>
-
-</div><!-- /.container -->
-
-  
+  </div>

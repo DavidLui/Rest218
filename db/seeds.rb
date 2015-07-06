@@ -5,12 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
- # Appetizer.create(name: 'Vegetable Spring Rolls(3)',price: '$5.00')
- # Appetizer.create(name: 'Dumplings (Steamed or Fried)(5)',price: '$6.00')
- # Pin.create(foodtype: 'appetizers')
- # Pin.create(foodtype: 'soups')
- # Soup.create(name: 'Subgum with Melon Soup',price: '$8.45')
 
+
+ Pin.create(foodtype: 'lunchspecials', name: 'Lunch Special (11:00am-3:00pm)')
+ Pin.create(foodtype: 'chefrecommends', name: 'Chef\'s Recommendations')
+ Pin.create(foodtype: 'appetizers', name: 'Appetizers')
+ Pin.create(foodtype: 'soups', name: 'Soups')
  Pin.create(foodtype: 'congeeincasseroles', name: 'Congee In Casserole')
  Pin.create(foodtype: 'lomeins', name: 'Lo Mein')
  Pin.create(foodtype: 'chowfuns', name: 'Congee In Casserole')
@@ -24,6 +24,10 @@
  Pin.create(foodtype: 'riceincasseroles', name: 'Rice In Casserole')
  Pin.create(foodtype: 'casseroledishes', name: 'Casserole Dish')
  Pin.create(foodtype: 'sizzlingplates', name: 'Sizzling Plates')
- Pin.create(foodtype: 'chefrecommends', name: 'Chef\'s Recommendations')
  Pin.create(foodtype: 'ricedishes', name: 'Rice Dishes')
- Pin.create(foodtype: 'lunchspecials', name: 'Lunch Special')
+
+
+ 
+ # Appetizer.create(name: 'Vegetable Spring Rolls(3)',price: '$5.00')
+ # Appetizer.create(name: 'Dumplings (Steamed or Fried)(5)',price: '$6.00')
+ # Soup.create(name: 'Subgum with Melon Soup',price: '$8.45')
