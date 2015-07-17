@@ -3,6 +3,20 @@
 <div class="container-fluid" style="background:#E6E6E6;">
     <div class="container-fluid" style="margin-top: -0px;">
       <div class="page-header">
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+      <% end %>
+
+
+     <% if user_signed_in? %>
+          # do something
+     <% else %>
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+      <% end %>  
+
       <div class="jumbotron">
           <h1>MENU</h1>
       </jumbotron>
