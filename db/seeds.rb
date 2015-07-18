@@ -7,24 +7,23 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
- # Pin.create(foodtype: 'lunchspecials', name: 'Lunch Special (11:00am-3:00pm)')
- # Pin.create(foodtype: 'chefrecommends', name: 'Chef\'s Recommendations')
- # Pin.create(foodtype: 'appetizers', name: 'Appetizers')
- # Pin.create(foodtype: 'soups', name: 'Soups')
- # Pin.create(foodtype: 'congeeincasseroles', name: 'Congee In Casserole')
- # Pin.create(foodtype: 'lomeins', name: 'Lo Mein')
- # Pin.create(foodtype: 'chowfuns', name: 'Congee In Casserole')
- # Pin.create(foodtype: 'congeeincasseroles', name: 'Chow Fun, Mai Fun, Chow Mein and Fried Rice')
- # Pin.create(foodtype: 'porkbeefs', name: 'Pork and Beef')
- # Pin.create(foodtype: 'chickenducks', name: 'Chicken and Duck')
- # Pin.create(foodtype: 'seafoods', name: 'Seafood')
- # Pin.create(foodtype: 'shells', name: 'Shell')
- # Pin.create(foodtype: 'porkbeefs', name: 'Pork and Beef')
- # Pin.create(foodtype: 'vegetables', name: 'Vegetable')
- # Pin.create(foodtype: 'riceincasseroles', name: 'Rice In Casserole')
- # Pin.create(foodtype: 'casseroledishes', name: 'Casserole Dish')
- # Pin.create(foodtype: 'sizzlingplates', name: 'Sizzling Plates')
- # Pin.create(foodtype: 'ricedishes', name: 'Rice Dishes')
+ Pin.create(foodtype: 'lunchspecials', name: 'Lunch Special (11:00am-3:00pm)')
+ Pin.create(foodtype: 'chefrecommends', name: 'Chef\'s Recommendations')
+ Pin.create(foodtype: 'appetizers', name: 'Appetizers')
+ Pin.create(foodtype: 'soups', name: 'Soups')
+ Pin.create(foodtype: 'congeeincasseroles', name: 'Congee In Casserole')
+ Pin.create(foodtype: 'lomeins', name: 'Lo Mein')
+ Pin.create(foodtype: 'chowfuns', name: 'Chow Fun, Mai Fun, Chow Mein and Fried Rice')
+ Pin.create(foodtype: 'porkbeefs', name: 'Pork and Beef')
+ Pin.create(foodtype: 'chickenducks', name: 'Chicken and Duck')
+ Pin.create(foodtype: 'seafoods', name: 'Seafood')
+ Pin.create(foodtype: 'shells', name: 'Shell')
+ Pin.create(foodtype: 'porkbeefs', name: 'Pork and Beef')
+ Pin.create(foodtype: 'vegetables', name: 'Vegetable')
+ Pin.create(foodtype: 'riceincasseroles', name: 'Rice In Casserole')
+ Pin.create(foodtype: 'casseroledishes', name: 'Casserole Dish')
+ Pin.create(foodtype: 'sizzlingplates', name: 'Sizzling Plates')
+ Pin.create(foodtype: 'ricedishes', name: 'Rice Dishes')
 
 # user = User.find_or_initialize_by(email: 'bob@example.com')
 # user.name = 'Bob'
@@ -32,18 +31,18 @@
 # user.role = 'manager'
 # user.save!
  
- # Appetizer.create(name: 'Vegetable Spring Rolls(3)',price: '$5.00')
- app = Appetizer.find_or_initialize_by(name: 'Vegetable Spring Rolls(3)')
- app.price = '5.00'
- app.save!
- # Appetizer.create(name: 'Dumplings (Steamed or Fried)(5)',price: '$6.00')
- app2 = Appetizer.find_or_initialize_by(name: 'Dumplings (Steamed or Fried)(5)')
- app2.price = '5.00'
- app2.save!
- # Soup.create(name: 'Subgum with Melon Soup',price: '$8.45')
- soup = Soup.find_or_initialize_by(name: 'Subgum with Melon Soup')
- soup.price = '8.45'
- soup.save!
+  Appetizer.create(name: 'Vegetable Spring Rolls(3)',price: '5.00')
+ # app = Appetizer.find_or_initialize_by(name: 'Vegetable Spring Rolls(3)')
+ # app.price = '5.00'
+ # app.save!
+ Appetizer.create(name: 'Dumplings (Steamed or Fried)(5)',price: '6.00')
+ # app2 = Appetizer.find_or_initialize_by(name: 'Dumplings (Steamed or Fried)(5)')
+ # app2.price = '5.00'
+ # app2.save!
+ Soup.create(name: 'Subgum with Melon Soup',price: '8.45')
+ # soup = Soup.find_or_initialize_by(name: 'Subgum with Melon Soup')
+ # soup.price = '8.45'
+ # soup.save!
  Soup.create(name: 'Minced Chicken Corn Soup',price: '7.95')
  Soup.create(name: 'Hot and Sour Soup',price: '7.95')
  Soup.create(name: 'West Lake Minced Beef Soup',price: '8.95')
