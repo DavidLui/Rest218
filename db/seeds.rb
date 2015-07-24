@@ -14,7 +14,6 @@
  Pin.create(foodtype: 'congeeincasseroles', name: 'Congee In Casserole')
  Pin.create(foodtype: 'lomeins', name: 'Lo Mein')
  Pin.create(foodtype: 'chowfuns', name: 'Chow Fun, Mai Fun, Chow Mein and Fried Rice')
- Pin.create(foodtype: 'porkbeefs', name: 'Pork and Beef')
  Pin.create(foodtype: 'chickenducks', name: 'Chicken and Duck')
  Pin.create(foodtype: 'seafoods', name: 'Seafood')
  Pin.create(foodtype: 'shells', name: 'Shell')

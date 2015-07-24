@@ -1,3 +1,3 @@
 class Pin < ActiveRecord::Base
-	  has_many :appetizers
+	  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 end
