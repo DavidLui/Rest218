@@ -14,6 +14,10 @@ class PinsController < ApplicationController
   def show
   end
 
+  def pin_params
+    params.require(:pin).permit(:description, :image)
+  end
+
   # GET /pins/new
   def new
     @pin = Pin.new
