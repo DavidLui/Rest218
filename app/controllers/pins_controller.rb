@@ -13,9 +13,9 @@ class PinsController < ApplicationController
   # GET /pins/1.json
   def show
   end
-
+  #parameters
   def pin_params
-    params.require(:pin).permit(:description, :image)
+    params.require(:pin).permit(:name, :image)
   end
 
   # GET /pins/new
@@ -73,8 +73,4 @@ class PinsController < ApplicationController
       @pin = Pin.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pin_params
-      params.require(:pin).permit(:name, :image)
-    end
 end
