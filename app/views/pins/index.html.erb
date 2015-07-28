@@ -53,6 +53,8 @@
 
       <% @pins.each do |pin| %>
               
+               
+                  
                 <div class="jumbotron" style="margin-top: -20px;">  
                 <!-- <span class="mw-headline" id=<% pin.foodtype %>><p style="margin-top: -30px;"><h1><%= pin.foodtype %></h1></p><hr></span> -->
                 <td><%= image_tag pin.image.url(:medium) %></td>
@@ -60,6 +62,7 @@
                 </jumbotron>
                 
                 <div class="row">
+
                   <% pin.foodtype.singularize.titleize.constantize.all.each do |type| %>
 
                     <div class="col-lg-4 col-md-4 col-sm-6">
@@ -76,6 +79,7 @@
                 </div>
                
                </div>
+               
       <% end %>
 
 
