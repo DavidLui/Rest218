@@ -80,7 +80,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#appetizers">Appetizers</a></li>
+            <li><a onclick="scroll('appetizers')" href="#">Appetizers</a></li>
+            <li><a onclick="scroll('soups')" href="#">Soups</a></li>
             <li><a href="menu">Menu</a></li>
             <li><a href="#contact">Specialties</a></li>
             <li class="dropdown">
@@ -144,4 +145,17 @@
 
 </div><!-- /.container -->
 
-  </div>
+</div>
+
+<script>
+    function scroll(type) {
+      //alert("Hello! I am an alert box!");
+      //var test = "('#" + type + "')";
+
+      var $test = $('#'+type);
+      //alert(test); //'#appetizers'
+      
+       $("html, body").animate({ scrollTop: $test.offset().top-150 }, 600); //this doesnt work
+       //$("html, body").animate({ scrollTop: $('#appetizers').offset().top-150 }, 600); //this works
+    }
+</script>
