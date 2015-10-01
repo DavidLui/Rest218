@@ -29,10 +29,10 @@ class AppetizersController < ApplicationController
     respond_to do |format|
       if @appetizer.save
         format.html { redirect_to @appetizer, notice: 'Appetizer was successfully created.' }
-        format.json { render :show, status: :created, location: @appetizer }
+     
       else
         format.html { render :new }
-        format.json { render json: @appetizer.errors, status: :unprocessable_entity }
+      
       end
     end
   end
@@ -43,10 +43,10 @@ class AppetizersController < ApplicationController
     respond_to do |format|
       if @appetizer.update(appetizer_params)
         format.html { redirect_to @appetizer, notice: 'Appetizer was successfully updated.' }
-        format.json { render :show, status: :ok, location: @appetizer }
+    
       else
         format.html { render :edit }
-        format.json { render json: @appetizer.errors, status: :unprocessable_entity }
+        
       end
     end
   end
@@ -57,7 +57,7 @@ class AppetizersController < ApplicationController
     @appetizer.destroy
     respond_to do |format|
       format.html { redirect_to appetizers_url, notice: 'Appetizer was successfully destroyed.' }
-      format.json { head :no_content }
+      
     end
   end
 

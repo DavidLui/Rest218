@@ -32,7 +32,10 @@ Rails.application.routes.draw do
 
   resources :appetizers
   resources :pins
-  root "pins#index"
+  root "pins#home"
+  get "specialties" => "pins#smallmenu"
+  get "home" => "pins#home"
+  get "menu" => "pins#index"
   # get 'pages/home'
   # root "pages#home"
   # The priority is based upon order of creation: first created -> highest priority.

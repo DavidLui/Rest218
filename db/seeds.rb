@@ -54,7 +54,7 @@
  Congeeincasserole.create(name: 'Slice Fish Congee',price: '6.75')
  Congeeincasserole.create(name: 'Fish Head Congee',price: '6.75')
  Congeeincasserole.create(name: 'Frog Congee',price: '8.95')
- Congeeincasserole.create(name: 'Pork and Preserved EGg Congee',price: '5.00')
+ Congeeincasserole.create(name: 'Pork and Preserved Egg Congee',price: '5.00')
  Congeeincasserole.create(name: 'Pork Blood Congee',price: '5.00')
  Congeeincasserole.create(name: 'Seafood Congee',price: '6.75')
 
